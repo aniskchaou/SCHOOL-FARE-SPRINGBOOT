@@ -1,0 +1,22 @@
+String name;
+<a type="button" th:href="@{/addblog}">blogs</a>
+<table class="table table-striped">
+	<thead>
+		<tr>
+		  
+			<th>name</th>
+			<th>actions</th>
+			
+		</tr>
+	</thead>
+	<tbody>
+		<tr th:each="b:${blogs}">
+		   
+			<td th:text="${b.name}"></td>
+			<td><a type="button" class="btn btn-primary"
+				th:href="@{/media/{id}(id=${m.id}) }"><span
+					class="fa fa-edit"></span>edit</a></td>
+		</tr>
+
+	</tbody>
+</table>
